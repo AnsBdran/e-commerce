@@ -5,3 +5,7 @@
 body {
   @apply bg-slate-100;
 }
+
+.increment-decrement {
+  @apply bg-slate-100 hover:bg-slate-200 cursor-pointer transition-all p-1 border border-slate-500;
+}

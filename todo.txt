@@ -1,0 +1,1 @@
+make the total amount fixed for two points.
