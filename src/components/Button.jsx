@@ -1,6 +1,10 @@
-const Button = ({ children, ...rest }) => (
+const Button = ({ children, className, ...rest }) => (
   <button
-    className="cursor-pointer py-2 px-4 rounded w-full mr-4 bg-slate-50 text-slate-800 hover:bg-slate-200"
+    className={
+      className +
+      " " +
+      "cursor-pointer py-2 px-4 rounded  shadow-lg active:shadow-md"
+    }
     {...rest}
   >
     {children}

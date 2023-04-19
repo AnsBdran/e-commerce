@@ -5,12 +5,13 @@ import { CartContext } from "../contexts/cart-context";
 const CartItem = ({ cartItem }) => {
   const { removeCartItem, addCartItem, deleteCartItem } =
     useContext(CartContext);
+  const totalPrice = (cartItem.price * cartItem.quantity).toFixed(2);
   return (
     <div className="bg-white mb-4 flex gap-4 p-3 shadow-md">
-      <div className="w-8 flex justify-center items-center">
+      <div className="w-16 flex justify-center items-center">
         <img src={cartItem.image} alt={cartItem.title} />
       </div>
-      <div className="flex-1">
+      <div className="flex-1 flex flex-col justify-around">
         <div className="flex">
           <h4 className="leading-5 flex-auto">{cartItem.title}</h4>
           <div className="bg-slate-50 hover:bg-white self-start p-[2px] rounded-lg">
@@ -42,9 +43,7 @@ const CartItem = ({ cartItem }) => {
           <span className="text-slate-400 min-w-[4rem] text-right mr-24">
             $ {cartItem.price}
           </span>
-          <span className="min-w-[5rem] text-right">
-            $ {cartItem.price * cartItem.quantity}
-          </span>
+          <span className="min-w-[5rem] text-right">$ {totalPrice}</span>
         </div>
       </div>
     </div>

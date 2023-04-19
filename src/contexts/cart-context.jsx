@@ -32,6 +32,13 @@ const CartProvider = ({ children }) => {
     setCartItems([]);
   };
 
+  const total = cartItems
+    .reduce((acc, current) => {
+      if (cartItems) return acc + current.quantity * current.price;
+      else return acc;
+    }, 0)
+    .toFixed(2);
+
   const numberOfCartItems = cartItems.length;
 
   const value = {
@@ -43,6 +50,7 @@ const CartProvider = ({ children }) => {
     deleteCartItem,
     clearCart,
     numberOfCartItems,
+    total,
   };
   console.log("context is", isShowing);
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
