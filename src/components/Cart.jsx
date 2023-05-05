@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { BsArrowRight } from "react-icons/bs";
+import { RiDeleteBinLine } from "react-icons/ri";
 import { CartContext } from "../contexts/cart-context";
 import CartItem from "./CartItem";
 import Button from "./Button";
@@ -16,7 +17,7 @@ const Cart = () => {
   return (
     <section
       className={
-        "bg-slate-200 fixed top-0 transition-all h-screen w-full md:w-1/3 z-30 flex flex-col justify-between " +
+        "bg-slate-200 fixed top-0 transition-all h-screen w-full sm:w-2/3 md:w-3/5 lg:w-1/3 z-30 flex flex-col justify-between shadow-2xl border-l border-slate-950" +
         " " +
         ifClass
       }
@@ -41,7 +42,7 @@ const Cart = () => {
             onClick={clearCart}
             className="mt-4 w-full  bg-slate-50 text-slate-800 hover:bg-slate-200"
           >
-            Clear cart
+            Clear cart <RiDeleteBinLine />
           </Button>
         )}
       </div>

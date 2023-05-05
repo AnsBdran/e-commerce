@@ -11,7 +11,11 @@ export const addItemToCart = (cartItems, product) => {
       } else return item;
     });
   } else {
-    toast.success(msg(product));
+    toast.success(msg(product), {
+      autoClose: 2500,
+      hideProgressBar: true,
+      draggable: true,
+    });
     return [...cartItems, { ...product, quantity: 1 }];
   }
 };

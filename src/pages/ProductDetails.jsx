@@ -7,8 +7,8 @@ const ProductDetails = () => {
   const { product } = useLoaderData();
   const { addCartItem } = useContext(CartContext);
   return (
-    <main>
-      <section className="p-12 bg-white">
+    <main className="flex flex-col lg:flex-row gap-24 py-24 px-6 lg:px-24 items-center min-h-[85vh]">
+      <section className="p-12 bg-white max-w-[250px] md:max-w-md">
         <img src={product.image} alt={product.title} />
       </section>
       <section className="mt-4">

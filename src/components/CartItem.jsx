@@ -7,12 +7,12 @@ const CartItem = ({ cartItem }) => {
     useContext(CartContext);
   const totalPrice = (cartItem.price * cartItem.quantity).toFixed(2);
   return (
-    <div className="bg-white mb-4 flex gap-4 p-3 shadow-md">
-      <div className="w-16 flex justify-center items-center">
+    <div className="bg-white mb-4 flex gap-4 p-2 shadow-md min-h-[100px]">
+      <div className="basis-16 flex justify-center items-center">
         <img src={cartItem.image} alt={cartItem.title} />
       </div>
-      <div className="flex-1 flex flex-col justify-around">
-        <div className="flex">
+      <div className="flex-auto flex flex-col justify-around">
+        <div className="flex justify-between gap-3">
           <h4 className="leading-5 flex-auto">{cartItem.title}</h4>
           <div className="bg-slate-50 hover:bg-white self-start p-[2px] rounded-lg">
             <AiOutlineClose
@@ -40,10 +40,8 @@ const CartItem = ({ cartItem }) => {
               <AiOutlinePlus />
             </span>
           </div>
-          <span className="text-slate-400 min-w-[4rem] text-right mr-24">
-            $ {cartItem.price}
-          </span>
-          <span className="min-w-[5rem] text-right">$ {totalPrice}</span>
+          <span className="text-slate-400 text-right ">$ {cartItem.price}</span>
+          <span className=" text-right">$ {totalPrice}</span>
         </div>
       </div>
     </div>

@@ -9,7 +9,7 @@ const Home = ({}) => {
   return (
     <main className="">
       <Hero />
-      <section className="grid xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-12 gap-x-8 px-4  sm:px-12">
+      <section className="pt-8 grid xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-12 gap-x-8 px-4  sm:px-12">
         {products.map((product) => (
           <Product key={product.id} product={product} />
         ))}
