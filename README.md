@@ -1,3 +1,3 @@
 # E-commerce website.
 
-## This is a beta version of the website, The final version will be released soom, stay tuned!
+## This is a beta version of the website, the final version will be released soon, stay tuned!
