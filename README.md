@@ -1,3 +1,3 @@
-# Card Matching Puzzle Game
+# E-commerce website.
 
-## Fully responsive card matching game, [check it out](https://card-matching-puzzle.netlify.app/)
+## This is a beta version of the website, The final version will be released soom, stay tuned!
